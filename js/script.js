@@ -4,7 +4,7 @@ $("input[type='radio']").click(function () {
     var name = $(this).prop("name");
     // clear the other checked options of the radio group
     $("#" + name + "-menu input[type='radio']").each(function (index) {
-        $(this).data("status", "unchecked");;
+        $(this).data("status", "unchecked");
     });
 
     // change of status checked/unchecked
@@ -29,7 +29,7 @@ function updateResult() {
     var placa = $("#placa-menu input[type='radio']:checked").val();
     var days = ['LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO', 'DOMINGO']
 
-    pico_cedula = [['1', '2'], ['3', '4'], ['5', '6'], ['7', '8'], ['9', '0'], ['1', '3', '5', '7', '9'], ['0', '2', '4', '6', '8']]
+    pico_cedula = [['1', '9'], ['2', '3'], ['4', '5'], ['6', '7'], ['8', '0'], [], []]
     pico_vida = [['1', '3', '5', '7', '9'], ['0', '2', '4', '6', '8'], ['1', '3', '5', '7', '9'], ['0', '2', '4', '6', '8'], ['1', '3', '5', '7', '9'], ['0', '2', '4', '6', '8'], ['1', '3', '5', '7', '9', '0', '2', '4', '6', '8']]
     pico_placa = [['5', '6'], ['7', '8'], ['9', '0'], ['1', '2'], ['3', '4'], [], []]
     console.log(cedula + " " + placa)
@@ -65,15 +65,7 @@ function updateResult() {
             $(".day #day-" + i).html('<span><i class="fas fa-ban"> </i> ' + days[i] + ': Quédate en casa</span>');
 
         }
-
-
-
     }
-
-
-
-
-
 }
 
 
